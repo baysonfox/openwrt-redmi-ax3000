@@ -41,28 +41,15 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Configure
+      - name: Apply custom patches
         run: |
-          cat <<EOF | sed -E 's/^  //' >.config
-            CONFIG_TARGET_ipq50xx=y
-            CONFIG_TARGET_ipq50xx_arm=y
-            CONFIG_TARGET_ipq50xx_arm_DEVICE_redmi_ax3000=y
+          cd feeds/luci
+          git apply ../../baysonfox-patches/fullconenat-luci.patch
 
-            CONFIG_IB=y
-            # CONFIG_IB_STANDALONE is not set
-            CONFIG_SDK=y
-            CONFIG_MAKE_TOOLCHAIN=y
-
-            CONFIG_ALL_NONSHARED=y
-            CONFIG_REPRODUCIBLE_DEBUG_INFO=y
-
-            CONFIG_PACKAGE_kmod-bonding=y
-            CONFIG_PACKAGE_kmod-qca-nss-ecm-standard=y
-            CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y
-
-            CONFIG_PACKAGE_luci=y
-          EOF
-          make defconfig
+      - name: Configure pre-defined config file
+        run: |
+          cp baysonfox-config .config
+          
 
       - name: Download
         run: |
