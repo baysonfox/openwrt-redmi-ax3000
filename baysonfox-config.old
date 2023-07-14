@@ -2368,20 +2368,6 @@ CONFIG_PACKAGE_kmod-phylib-broadcom=m
 CONFIG_PACKAGE_kmod-phylink=m
 CONFIG_PACKAGE_kmod-qca-nss-dp=y
 CONFIG_PACKAGE_kmod-qca-nss-drv=y
-CONFIG_PACKAGE_kmod-qca-nss-drv-clmapmgr=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-eogremgr=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-gre=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-l2tpv2=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-lag-mgr=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-match=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-netlink=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-pptp=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-profile=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-pvxlanmgr=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-tun6rd=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-tunipip6=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-vxlanmgr=m
 CONFIG_PACKAGE_kmod-qca-nss-drv-wifi-meshmgr=y
 CONFIG_PACKAGE_kmod-qca-ssdk-nohnat=y
 CONFIG_PACKAGE_kmod-r6040=m
@@ -2429,10 +2415,11 @@ CONFIG_BATMAN_ADV_MCAST=y
 CONFIG_PACKAGE_kmod-bonding=m
 CONFIG_PACKAGE_kmod-bpf-test=m
 CONFIG_PACKAGE_kmod-dnsresolver=m
+CONFIG_PACKAGE_kmod-fast-classifier=y
 CONFIG_PACKAGE_kmod-fou=m
 CONFIG_PACKAGE_kmod-fou6=m
 CONFIG_PACKAGE_kmod-geneve=m
-CONFIG_PACKAGE_kmod-gre=y
+CONFIG_PACKAGE_kmod-gre=m
 CONFIG_PACKAGE_kmod-gre6=m
 CONFIG_PACKAGE_kmod-ip-vti=m
 CONFIG_PACKAGE_kmod-ip6-tunnel=m
@@ -2442,7 +2429,7 @@ CONFIG_PACKAGE_kmod-ipoa=m
 CONFIG_PACKAGE_kmod-ipsec=m
 CONFIG_PACKAGE_kmod-ipsec4=m
 CONFIG_PACKAGE_kmod-ipsec6=m
-CONFIG_PACKAGE_kmod-iptunnel=y
+CONFIG_PACKAGE_kmod-iptunnel=m
 CONFIG_PACKAGE_kmod-iptunnel4=m
 CONFIG_PACKAGE_kmod-iptunnel6=m
 CONFIG_PACKAGE_kmod-isdn4linux=m
@@ -2473,24 +2460,7 @@ CONFIG_PACKAGE_kmod-pppoa=m
 CONFIG_PACKAGE_kmod-pppoe=y
 CONFIG_PACKAGE_kmod-pppol2tp=m
 CONFIG_PACKAGE_kmod-pppox=y
-CONFIG_PACKAGE_kmod-pptp=y
-CONFIG_PACKAGE_kmod-qca-nss-drv-igs=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-mirror=m
-CONFIG_PACKAGE_kmod-qca-nss-drv-qdisc=m
-CONFIG_PACKAGE_kmod-qca-nss-ecm-noload=m
-CONFIG_PACKAGE_kmod-qca-nss-ecm-nonss=m
-CONFIG_PACKAGE_kmod-qca-nss-ecm-premium=m
-
-#
-# ECM Configuration
-#
-# CONFIG_QCA_NSS_ECM_EXAMPLES_PCC is not set
-# CONFIG_QCA_NSS_ECM_EXAMPLES_MARK is not set
-# CONFIG_QCA_NSS_ECM_OVS is not set
-# end of ECM Configuration
-
-CONFIG_PACKAGE_kmod-qca-nss-ecm-premium-noload=m
-CONFIG_PACKAGE_kmod-qca-nss-ecm-standard=m
+CONFIG_PACKAGE_kmod-pptp=m
 CONFIG_PACKAGE_kmod-sched=m
 CONFIG_PACKAGE_kmod-sched-act-vlan=m
 CONFIG_PACKAGE_kmod-sched-bpf=m
@@ -2502,6 +2472,8 @@ CONFIG_PACKAGE_kmod-sched-flower=m
 CONFIG_PACKAGE_kmod-sched-ipset=m
 CONFIG_PACKAGE_kmod-sched-mqprio=m
 CONFIG_PACKAGE_kmod-sctp=m
+CONFIG_PACKAGE_kmod-shortcut-fe=y
+CONFIG_PACKAGE_kmod-shortcut-fe-cm=m
 CONFIG_PACKAGE_kmod-sit=m
 CONFIG_PACKAGE_kmod-slhc=y
 CONFIG_PACKAGE_kmod-slip=m
