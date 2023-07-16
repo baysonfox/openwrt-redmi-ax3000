@@ -26,7 +26,7 @@
 					path = path.substring(0, path.length - 1)
 				}
 
-				const response = await fetch(`https://api.github.com/repos/hzyitc/openwrt-redmi-ax3000/contents/${path}?ref=gh-pages`);
+				const response = await fetch(`https://api.github.com/repos/baysonfox/openwrt-redmi-ax3000/contents/${path}?ref=gh-pages`);
 				const data = await response.json();
 				if('message' in data) { // 404
 					document.getElementsByTagName('body')[0].innerText = data.message;
